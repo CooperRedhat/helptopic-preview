@@ -2,7 +2,7 @@
 
 - Run `yarn`
 
-- Then run `yarn start`
+- Then run `yarn start`, see view the app at **localhost:3000**
 
 - Add your HelpTopic to the src/examples directory
 
