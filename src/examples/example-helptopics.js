@@ -1,3 +1,3 @@
-import exampleHelpTopics from './example-topics.yaml';
+import example from './another-example.yaml';
 
-export const examples = exampleHelpTopics;
+export const examples = [example];

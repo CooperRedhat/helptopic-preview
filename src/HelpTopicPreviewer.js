@@ -1,10 +1,13 @@
 import React from 'react';
 import { Stack, StackItem } from '@patternfly/react-core';
 import { LoadingBox, HelpTopicContainer, HelpTopicContext } from '@patternfly/quickstarts';
-import {examples} from './examples/example-helptopics'
+import {examples} from './examples/example-helptopics';
+import '@patternfly/patternfly/patternfly.css';
+import '@patternfly/patternfly/patternfly-addons.css';
+import '@patternfly/quickstarts/dist/quickstarts.css';
 
 const TinyMockConsole = () => {
-  const { setActiveHelpTopicByName, helpTopics } = React.useContext(HelpTopicContext);
+  const { setActiveHelpTopicByName } = React.useContext(HelpTopicContext);
 
   const handleSetTopic = (name) => {
     setActiveHelpTopicByName(name);
@@ -12,14 +15,13 @@ const TinyMockConsole = () => {
 
   return (
     <Stack hasGutter>
-        {console.log(examples)}
-      {/* {helpTopics.map((topic) => {
+      {examples.map((topic) => {
         return (
           <StackItem key={topic.name}>
-            <a onClick={() => handleSetTopic(topic.name)}>Open Help {topic.title}</a>
+            <span onClick={() => handleSetTopic(topic.name)}>Open {topic.title}</span>
           </StackItem>
         );
-      })} */}
+      })}
     </Stack>
   );
 };
@@ -39,7 +41,7 @@ export const HelpTopicPreviewer = () => {
   }, []);
 
   const inContextHelpProps = {
-    helpTopics: exampleHelpTopics,
+    helpTopics: examples,
     language,
     loading,
   };
