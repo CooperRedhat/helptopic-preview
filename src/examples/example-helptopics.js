@@ -1,3 +1,4 @@
-import example from './another-example.yaml';
+import example from './example.yaml';
+import anotherExample from './another-example.yaml';
 
-export const examples = [example];
+export const examples = [example, anotherExample];

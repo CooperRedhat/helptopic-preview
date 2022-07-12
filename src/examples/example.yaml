@@ -1,7 +1,7 @@
-name: another-example
+name: example
 tags:
   - page-1
-title: Another Example Help Topic
+title: Example Help Topic
 content: |-
   **An Automatic Deployment** is...
 
